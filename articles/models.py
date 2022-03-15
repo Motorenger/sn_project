@@ -1,7 +1,3 @@
-from operator import mod
-from re import M
-from turtle import mode, title
-from unicodedata import category
 from django.db import models
 
 # Create your models here.
