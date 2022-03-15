@@ -14,6 +14,7 @@ class SportsMen(models.Model):
     date_of_birth = models.DateField()
     content = models.TextField()
     category = models.ManyToManyField(Category)
+    image = models.ImageField(null=True, blank=True, upload_to='images')
     
     def __str__(self):
         return self.name

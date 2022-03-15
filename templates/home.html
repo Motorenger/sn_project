@@ -3,6 +3,6 @@
 {% block content %}
     {% for person in object_list %}
         {{person.name}}
-    
+        <img src="{{ person.image.url}}">
     {% endfor %}
 {% endblock content %}
