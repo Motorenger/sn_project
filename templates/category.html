@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 
+{% block title %} {{category}} {% endblock title %} 
+
 {% block content %}
     {% for person in sportsmens %}
-        {{person.name}}
-        <img src="{{ person.image.url }}">
-
+    <div class="card border-dark mb-3" style="width: 1000px; height: 300px; margin: 15px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ person.image.url }}" class="img-fluid rounded-start" style="width: 350px; height: 300px; padding: 10px; " alt="...">
+          </div>
+          <div class="col-md-8" style="border-left: 1px solid;">
+            <div class="card-body" >
+              <h5 class="card-title"><a href="{% url 'detail' person.id %}">{{ person.name }}</a><small class="text-muted"> {{ person.date_of_birth }}</small></h5>
+              <p class="card-text">{{ person.preview}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     {% endfor %}
 {% endblock content %}

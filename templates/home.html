@@ -10,9 +10,9 @@
           </div>
           <div class="col-md-8" style="border-left: 1px solid;">
             <div class="card-body" >
-              <h5 class="card-title">{{ person.name }}</h5>
-              <p class="card-text"><small class="text-muted">Sport:{{ person.category }}</small></p>
-              <p class="card-text">{{ person.content }}</p>
+              <h5 class="card-title"><a href="{% url 'detail' person.id %}">{{ person.name }}</a><small class="text-muted"> {{ person.date_of_birth }}</small></h5>
+              <p class="card-text"><small class="text-muted">Sport: {{ person.category }}</small></p>
+              <p class="card-text">{{ person.preview }}</p>
             </div>
           </div>
         </div>
